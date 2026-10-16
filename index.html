@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Установить ALI clicker | Официально ✔</title>
+    <title>Установите ALI clicker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fb;
+            min-height: 100vh;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* ===== ЛЕВАЯ КОЛОНКА — красно-голубой градиент ===== */
+        .left {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 35%, #dc2626 100%);
+            padding: 64px 56px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            color: white;
+            clip-path: polygon(0 0, 100% 0, calc(100% - 120px) 100%, 0 100%);
+            margin-right: -60px;
+            z-index: 1;
+        }
+
+        .left::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            top: -100px;
+            right: -100px;
+        }
+
+        .left::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            bottom: -100px;
+            left: -80px;
+        }
+
+        .left-content {
+            position: relative;
+            z-index: 1;
+            max-width: 520px;
+        }
+
+        /* ===== УВЕЛИЧЕННЫЙ ЛОГОТИП ===== */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 52px;
+            font-size: 34px;          /* было 22px */
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-icon {
+            width: 88px;              /* было 52px */
+            height: 88px;
+            border-radius: 22px;
+            overflow: hidden;
+            flex-shrink: 0;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .left h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .left .subtitle {
+            font-size: 17px;
+            line-height: 1.6;
+            opacity: 0.92;
+        }
+
+        /* ===== ПРАВАЯ КОЛОНКА — ЛЕСЕНКА ===== */
+        .right {
+            padding: 64px 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f5f7fb;
+            position: relative;
+            z-index: 0;
+        }
+
+        .actions {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 440px;
+            margin-left: 60px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            width: 100%;
+            padding: 28px 36px;
+            border: none;
+            border-radius: 16px;
+            font-size: 19px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+            font-family: inherit;
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .btn:active {
+            transform: translateY(2px) translateX(-2px);
+        }
+
+        /* ===== ЛЕСЕНКА ===== */
+        .btn-1 {
+            margin-left: 0;
+            animation-delay: 0.05s;
+        }
+
+        .btn-2 {
+            margin-left: -40px;
+            animation-delay: 0.15s;
+        }
+
+        .btn-3 {
+            margin-left: -80px;
+            animation-delay: 0.25s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 1. Скачать — красно-голубой градиент */
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb 0%, #dc2626 100%);
+            color: white;
+            box-shadow: 0 10px 26px rgba(37, 99, 235, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px) translateX(-3px);
+            box-shadow: 0 16px 34px rgba(220, 38, 38, 0.45);
+        }
+
+        /* 2. Инфо — светлая */
+        .btn-secondary {
+            background: white;
+            color: #000;
+            box-shadow: 0 6px 18px rgba(37, 99, 235, 0.15);
+            border: 2px solid #dbeafe;
+        }
+
+        .btn-secondary:hover {
+            background: #eff6ff;
+            transform: translateY(-3px) translateX(-3px);
+            box-shadow: 0 12px 26px rgba(37, 99, 235, 0.25);
+            border-color: #93c5fd;
+        }
+
+        /* 3. Журнал обновлений — прозрачная с мягкой рамкой */
+        .btn-outline {
+            background: transparent;
+            color: #000;
+            border: 2px solid #fecaca;
+        }
+
+        .btn-outline:hover {
+            border-color: #fca5a5;
+            background: #fef2f2;
+            transform: translateY(-3px) translateX(-3px);
+        }
+
+        /* Иконки SVG */
+        .btn-icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .btn-primary .btn-icon img {
+            filter: brightness(0) invert(1);
+        }
+
+        /* ===== АДАПТИВ ===== */
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .left {
+                padding: 48px 32px 72px;
+                clip-path: polygon(0 0, 100% 0, 100% calc(100% - 60px), 0 100%);
+                margin-right: 0;
+                margin-bottom: -30px;
+            }
+
+            .left h1 {
+                font-size: 32px;
+            }
+
+            .left .subtitle {
+                font-size: 15px;
+            }
+
+            .logo {
+                margin-bottom: 32px;
+                font-size: 28px;
+                gap: 16px;
+            }
+
+            .logo-icon {
+                width: 72px;
+                height: 72px;
+                border-radius: 18px;
+            }
+
+            .right {
+                padding: 60px 24px 40px;
+            }
+
+            .actions {
+                margin-left: 0;
+                max-width: 100%;
+            }
+
+            .btn-2 {
+                margin-left: -24px;
+            }
+
+            .btn-3 {
+                margin-left: -48px;
+            }
+
+            .btn {
+                padding: 22px 24px;
+                font-size: 17px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .left {
+                padding: 36px 24px 64px;
+                clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), 0 100%);
+            }
+
+            .left h1 {
+                font-size: 26px;
+            }
+
+            .logo {
+                font-size: 22px;
+                gap: 12px;
+                margin-bottom: 28px;
+            }
+
+            .logo-icon {
+                width: 56px;
+                height: 56px;
+                border-radius: 14px;
+            }
+
+            .right {
+                padding: 48px 16px 32px;
+            }
+
+            .btn-2 {
+                margin-left: -16px;
+            }
+
+            .btn-3 {
+                margin-left: -32px;
+            }
+
+            .btn {
+                padding: 20px 20px;
+                font-size: 16px;
+                border-radius: 14px;
+            }
+
+            .btn-icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <!-- ЛЕВАЯ КОЛОНКА -->
+        <div class="left">
+            <div class="left-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="icon.jpg" alt="ALI clicker">
+                    </div>
+                    <span>ALI clicker</span>
+                </div>
+
+                <h1>Кликер, который всегда под рукой</h1>
+                <p class="subtitle">
+                    Установите ALI clicker и получите заряд эмоций, либо дэпните их.
+                </p>
+            </div>
+        </div>
+
+        <!-- ПРАВАЯ КОЛОНКА — ЛЕСЕНКА -->
+        <div class="right">
+            <div class="actions">
+                <!-- 1. Скачать -->
+                <a href="#" class="btn btn-primary btn-1" id="downloadBtn">
+                    <span class="btn-icon">
+                        <img src="download.svg" alt="">
+                    </span>
+                    <span>Скачать</span>
+                </a>
+
+                <!-- 2. Инфо -->
+                <button class="btn btn-secondary btn-2" id="infoBtn">
+                    <span class="btn-icon">
+                        <img src="info.svg" alt="">
+                    </span>
+                    <span>Инфо</span>
+                </button>
+
+                <!-- 3. Журнал обновлений -->
+                <button class="btn btn-outline btn-3" id="changelogBtn">
+                    <span class="btn-icon">
+                        <img src="update_log.svg" alt="">
+                    </span>
+                    <span>Журнал обновлений</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                alert('Редирект в Google Play');
+            } else if (/iPad|iPhone|iPod/.test(userAgent)) {
+                alert('Редирект в App Store');
+            } else {
+                alert('Отсканируйте QR-код телефоном для установки');
+            }
+        });
+
+        document.getElementById('infoBtn').addEventListener('click', function() {
+            alert('Информация о приложении');
+        });
+
+        document.getElementById('changelogBtn').addEventListener('click', function() {
+            alert('Журнал обновлений');
+        });
+
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            console.log('PWA доступно для установки');
+        });
+    </script>
+</body>
+</html>
